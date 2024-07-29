@@ -9,12 +9,12 @@ Various Models created
 
 
 
-| ModelName        | Backbone  | Params(Millions) | Flops(Giga) | Loss    |
-|------------------|:---------:|------------------| ------------|---------|
-| DV-xs            |  None     |       6.5        | 25.2        |0.00279  |
-| DV-s             | Resnet-18 |       39.945     | 182.202     |0.000759 |
-| DV-t             |    VIT    |       28.56      | 96.20       |0.000418 |
-| DV-x             | Resent-34 |       50.054     | 220.916     |0.0002113|
+| ModelName        | Backbone  | Params(Millions) | Flops(Giga) | Loss (Huber Loss)|
+|------------------|:---------:|------------------| ------------|------------------|
+| DV-xs            |  None     |       6.5        | 25.2        |0.00279           |
+| DV-s             | Resnet-18 |       39.945     | 182.202     |0.000759          |
+| DV-t             |    VIT    |       28.56      | 96.20       |0.0004003         |
+| DV-x             | Resent-34 |       50.054     | 220.916     |0.0002113         |
 
 
 ## Inference Examples
