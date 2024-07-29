@@ -300,8 +300,7 @@ class R2AttU_Net(nn.Module):
 device = "cuda:1"
 #weights = R2AttU_Net()
 #network = weights.to(device)
-#weights = R2AttU_Net()
-weights = torch.load("./model_4(8)_0.0005273294026033645.pth")
+weights = R2AttU_Net()
 network = weights.to(device)
 for name,param in network.named_parameters():
     param.requires_grad = True
@@ -316,7 +315,7 @@ import numpy as np
 
 
 min_valid_loss = np.inf
-for epoch in range(9,21):
+for epoch in range(# Num of epochs):
     total_loss = 0
     #total_correct = 0
     pbar = tqdm(train_loader)
@@ -357,6 +356,6 @@ for epoch in range(9,21):
 
             
     print(f'Epoch {epoch+1} \t\t Training Loss: {total_loss} \t\t Validation Loss: {valid_loss/len(validation_loader)}')
-    torch.save(network, f"model_4({epoch+1})_{valid_loss/len(validation_loader)}.pth")
+    torch.save(network, f"model_({epoch+1})_{valid_loss/len(validation_loader)}.pth")
         
     print(f'Epoch ==>> {epoch+1}  \t\t Loss ==>> {total_loss/len(train_loader)}')
